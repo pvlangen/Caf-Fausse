@@ -1,0 +1,121 @@
+/* Algemene reset en basisstijl */
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #fdfcfb;
+  color: #2d2d2d;
+}
+
+a {
+  color: #704214;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header, nav, main, footer {
+  padding: 1rem;
+}
+
+/* Logo */
+.logo {
+  max-height: 120px;
+  margin-bottom: 1rem;
+}
+
+/* Navbar styles */
+nav {
+  padding: 12px;
+  background: #333;
+  color: #fff;
+  text-align: center;
+  position: relative;
+}
+
+.menu-button {
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Initially hidden, shown on smaller screens */
+  position: absolute;
+  right: 20px;
+  top: 12px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  margin: 0 12px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+  .menu-button {
+    display: block; /* Show menu button on smaller screens */
+  }
+
+  .menu {
+    display: none; /* Hide menu by default on smaller screens */
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav.open .menu {
+    display: flex; /* Show menu when open */
+  }
+}
+
+/* Titels */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #3d2e1e;
+}
+
+/* Homepagina foto's */
+.home-images {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.home-images img {
+  max-width: 30%;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.home-images img:hover {
+  transform: scale(1.03);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}

@@ -1,0 +1,6 @@
+.gallery-image img {
+    max-width: 150px; /* Ensure this is the desired width */
+    height: auto;
+    border-radius: 12px;
+    cursor: pointer;
+  }
