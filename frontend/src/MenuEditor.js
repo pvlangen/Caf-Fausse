@@ -41,7 +41,7 @@ export default function MenuEditor() {
 
     setError(null);
     const response = await addMenuItem(category, item);
-    if (response.success) {
+    if (!response.error) {
       setNewItems(prev => ({ ...prev, [category]: {} }));
       fetchMenu();
     } else {
