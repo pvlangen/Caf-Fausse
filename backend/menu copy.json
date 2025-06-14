@@ -1,0 +1,77 @@
+{
+    "intro": "Discover our gourmet selections crafted for the discerning palate.",
+    "starters": [
+      {
+        "id": "bruschetta",
+        "title": "Bruschetta",
+        "description": "Fresh tomatoes, basil, olive oil, and toasted baguette slices",
+        "price": 8.50
+      },
+      {
+        "id": "caesar-salad",
+        "title": "Caesar Salad",
+        "description": "Crisp romaine with homemade Caesar dressing",
+        "price": 9.00
+      }
+    ],
+    "main_courses": [
+      {
+        "id": "grilled-salmon",
+        "title": "Grilled Salmon",
+        "description": "Served with lemon butter sauce and seasonal vegetables",
+        "price": 22.00
+      },
+      {
+        "id": "ribeye-steak",
+        "title": "Ribeye Steak",
+        "description": "12 oz prime cut with garlic mashed potatoes",
+        "price": 28.00
+      },
+      {
+        "id": "vegetable-risotto",
+        "title": "Vegetable Risotto",
+        "description": "Creamy Arborio rice with wild mushrooms",
+        "price": 18.00
+      }
+    ],
+    "desserts": [
+      {
+        "id": "tiramisu",
+        "title": "Tiramisu",
+        "description": "Classic Italian dessert with mascarpone",
+        "price": 7.50
+      },
+      {
+        "id": "cheesecake",
+        "title": "Cheesecake",
+        "description": "Creamy cheesecake with berry compote",
+        "price": 7.00
+      }
+    ],
+    "beverages": [
+      {
+        "id": "red-wine-glass",
+        "title": "Red Wine (Glass)",
+        "description": "A selection of Italian reds",
+        "price": 10.00
+      },
+      {
+        "id": "white-wine-glass",
+        "title": "White Wine (Glass)",
+        "description": "Crisp and refreshing",
+        "price": 9.00
+      },
+      {
+        "id": "craft-beer",
+        "title": "Craft Beer",
+        "description": "Local artisan brews",
+        "price": 6.00
+      },
+      {
+        "id": "espresso",
+        "title": "Espresso",
+        "description": "Strong and aromatic",
+        "price": 3.00
+      }
+    ]
+  }

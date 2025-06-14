@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nieuwsbrief inschrijving</title>
+</head>
+<body>
+  <h1>Schrijf je in op de nieuwsbrief</h1>
+  <form id="newsletter-form">
+    <input type="text" name="name" placeholder="Jouw naam" required>
+    <input type="email" name="email" placeholder="Jouw e-mailadres" required>
+    <button type="submit">Inschrijven</button>
+  </form>
+  <div id="result"></div>
+
+  <h2>Subscribers</h2>
+  <ul id="subscriber-list"></ul>
+
+  <script>
+    // Handle inschrijving
+    document.getElementById('newsletter-form').onsubmit = async function(e) {
+      e.preventDefault();
+      const form = e.target;
+      const data = {
+        name: form.name.value,
+        email: form.email.value
+      };
+      const res = await fetch('http://localhost:5050/newsletter', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(data)
+      });
+      const msg = await res.json();
+      document.getElementById('result').innerText = msg.message || msg.error;
+      if (res.status === 201) loadSubscribers();
+    };
+
+    // Toon lijst van subscribers
+    async function loadSubscribers() {
+      const res = await fetch('http://localhost:5050/subscribers');
+      const data = await res.json();
+      const ul = document.getElementById('subscriber-list');
+      ul.innerHTML = '';
+      data.forEach(sub => {
+        const li = document.createElement('li');
+        li.innerText = `${sub.name} (${sub.email})`;
+        ul.appendChild(li);
+      });
+    }
+
+    // Initial load
+    loadSubscribers();
+  </script>
+</body>
+</html>
